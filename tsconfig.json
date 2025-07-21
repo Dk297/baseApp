@@ -1,3 +1,13 @@
 {
-  "extends": "@react-native/typescript-config"
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "strict": true,
+    // Path alias config
+    "baseUrl": ".",
+    "paths": {
+      // This needs to be mirrored in babel.config.js
+      "components/*": ["src/components/*"],
+      "src/*": ["src/*"]
+    }
+  }
 }

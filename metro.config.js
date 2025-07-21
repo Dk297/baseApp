@@ -1,11 +1,23 @@
+// metro.config.js
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
+const {
+  wrapWithReanimatedMetroConfig,
+} = require('react-native-reanimated/metro-config');
 
-/**
- * Metro configuration
- * https://reactnative.dev/docs/metro
- *
- * @type {import('@react-native/metro-config').MetroConfig}
- */
+const defaultConfig = getDefaultConfig(__dirname);
+
+// ⚠️ Thêm các asset nếu cần load ảnh, font
+defaultConfig.resolver.assetExts = [
+  ...defaultConfig.resolver.assetExts,
+  'bin',
+  'png',
+  'jpg',
+  'jpeg',
+  'gif',
+  'svg',
+];
+
 const config = {};
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+const merged = mergeConfig(defaultConfig, config);
+module.exports = wrapWithReanimatedMetroConfig(merged);
