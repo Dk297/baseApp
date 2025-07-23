@@ -163,7 +163,7 @@ const Select = ({
             nestedScrollEnabled
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
-                <SvgIcons icons="arrow_right" />
+                <SvgIcons icons="empty" width={40} height={40} />
                 <Text>Trống</Text>
               </View>
             }
