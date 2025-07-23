@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, { ClipPath, Defs, G, Path } from 'react-native-svg';
+import Svg, { ClipPath, Defs, G, Mask, Path } from 'react-native-svg';
 
 interface Props {
   width?: number;
@@ -12,7 +12,8 @@ interface Props {
     | 'angle_down'
     | 'angle_right'
     | 'clear'
-    | 'check';
+    | 'check'
+    | 'empty';
 }
 
 export const SvgIcons = ({
@@ -130,6 +131,40 @@ export const SvgIcons = ({
                 transform="translate(.634 .488)"
                 d="M0 0H29.6609V29.6609H0z"
               />
+            </ClipPath>
+          </Defs>
+        </Svg>
+      );
+    case 'empty':
+      return (
+        <Svg width={width} height={height} viewBox="0 0 24 24" fill="none">
+          <G clipPath="url(#clip0_211_52013)">
+            <Mask
+              id="a"
+              style={{
+                maskType: 'luminance',
+              }}
+              maskUnits="userSpaceOnUse"
+              x={0}
+              y={0}
+              width={24}
+              height={24}
+            >
+              <Path d="M24 0H0v24h24V0z" fill="#fff" />
+            </Mask>
+            <G
+              mask="url(#a)"
+              stroke="#333"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <Path d="M4.72 21h1.592a1 1 0 00.934-.643l1.1-2.877.012-2.762c0-.059.006-.117.016-.174l1.702-9.394a1 1 0 00-.984-1.178h-3.66a1 1 0 00-1 1.027l.26 9.436-.884 1.665a1 1 0 00.134 1.133l.281.317-.481 2.24A1 1 0 004.719 21zM8.358 14.63l-3.665-.195M19.29 21H17.7a1 1 0 01-.94-.657l-1.047-2.863-.012-2.763a.995.995 0 00-.016-.173L13.983 5.15a1 1 0 01.984-1.178h3.66a1 1 0 011 1.027l-.26 9.436.884 1.665a1 1 0 01-.134 1.133l-.281.317.435 2.26A1 1 0 0119.29 21zM15.7 14.63l3.666-.195" />
+            </G>
+          </G>
+          <Defs>
+            <ClipPath id="clip0_211_52013">
+              <Path fill="#fff" d="M0 0H24V24H0z" />
             </ClipPath>
           </Defs>
         </Svg>
