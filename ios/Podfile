@@ -14,6 +14,15 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+project 'BaseApp', {
+  'Debug Dev' => :debug,
+  'Debug Staging' => :debug,
+  'Debug' => :debug,
+  'Release Dev' => :release,
+  'Release Staging' => :release,
+  'Release' => :release,
+}
+
 target 'BaseApp' do
   config = use_native_modules!
 

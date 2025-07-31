@@ -1,23 +1,11 @@
 ENV=development
-API_BASE_URL=https://api-dev.yourapp.com
+API_BASE_URL=https:/$()/api-dev.yourapp.com
 APP_NAME=Base App dev
 ANALYTICS_ENABLED=false
 LOG_LEVEL=debug
-
-#android
 ANDROID_APP_ID=com.baseapp.dev
-# Android app version name
 ANDROID_APP_VERSION_NAME=2.0.2
-
-# Android version code
 ANDROID_APP_VERSION_CODE=59
-
-#ios
-# Bundle ID of iOS
 IOS_APP_ID=com.baseapp.dev
-
-# Version iOS
 IOS_APP_VERSION_CODE=1.0.0
-
-# Build code
 IOS_APP_BUILD_CODE=1

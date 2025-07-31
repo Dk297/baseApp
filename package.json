@@ -8,6 +8,9 @@
     "android-staging": "ENV=staging  && ENVFILE=.env.staging react-native run-android  --mode=stagingDebug --appIdSuffix=staging",
     "android-product": "ENV=production && ENVFILE=.env react-native run-android --mode=productDebug",
     "ios": "react-native run-ios",
+    "ios-develop": "react-native run-ios  --scheme BaseApp-Dev",
+    "ios-staging": "react-native run-ios --scheme BaseApp-Staging",
+    "ios-production": "react-native run-ios --scheme BaseApp ",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
